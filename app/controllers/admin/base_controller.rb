@@ -1,5 +1,5 @@
 class Admin::BaseController < ApplicationController
-  cattr_accessor :look_for_migrations
+  attr_accessor :look_for_migrations
   @@look_for_migrations = true
   layout 'administration'
   before_filter :login_required, :except => [ :login, :signup ]
